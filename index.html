@@ -36,6 +36,13 @@
                 <button ng-click="vm.cancel()">Cancel</button>
               </div>
 
+              <!-- delete task -->
+              <div ng-show="vm.isInRemoveMode(task.id)">
+                <p>{{ task.name }} - completed: {{ task.complete }}</p>
+                <button ng-click="vm.remove(task.id)">Confirm</button>
+                <button ng-click="vm.cancel()">Cancel</button>
+              </div>
+
             </div><!-- end of readMode ng-show -->
 
           </div><!-- end of ng-repeat -->
