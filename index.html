@@ -8,6 +8,9 @@
         <div ng-controller="ListController as vm">
           <h1>{{ vm.list.name }}</h1>
 
+          <input placeholder="task name" ng-model="vm.currentTask.name" />
+          <button ng-click="vm.add()">Add</button>
+
           <div ng-repeat="task in vm.list.tasks | orderBy: '$index'">
             <p>
               {{ $index + 1 }}: {{ task.name }} - completed: {{ task.complete }}
