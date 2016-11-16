@@ -14,7 +14,10 @@ function ListController() {
   vm.add = add;
   vm.currentTask = {};
   vm.startAdd = startAdd;
+  vm.startEdit = startEdit;
   vm.isInAddMode = isInAddMode;
+  vm.isInEditMode = isInEditMode;
+  vm.save = save;
 
   vm.list = {
     name: 'Todo List',
